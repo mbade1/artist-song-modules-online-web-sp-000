@@ -1,6 +1,6 @@
 module Memorable
 
-  defreset_all
+  def reset_all
     all.clear
   end
 
