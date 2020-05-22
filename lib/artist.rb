@@ -6,15 +6,15 @@ class Artist
 
   extend Memorable
 
-  @@artists = []
+  @@all = []
 
   def initialize
-    @@artists << self
+    @@all << self
     @songs = []
   end
 
   def self.find_by_name(name)
-    @@artists.detect{|a| a.name == name}
+    @@all.detect{|a| a.name == name}
   end
 
   def self.count
@@ -24,10 +24,6 @@ class Artist
   def add_song(song)
     @songs << song
     song.artist = self
-  end
-
-  def add_songs(songs)
-    songs.each { |song| add_song(song) }
   end
 
   def to_param
