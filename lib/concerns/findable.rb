@@ -1,4 +1,4 @@
 module Findable
-  
+
 end
   
