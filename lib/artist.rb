@@ -9,7 +9,7 @@ class Artist
   include Paramable::InstanceMethods
 
   @@artists = []
-  
+
   def self.all
     @@artists
   end
